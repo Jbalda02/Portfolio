@@ -4,7 +4,7 @@ function NavigationBar(){
     return(
         <div className="h-full flex justify-between px-6 lg:px-32 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <p className='py-3'>JBalda</p> 
-        <ol className="flex flex-row justify-evenly py-3 px-5 ">
+        <ol className="flex flex-row justify-evenly py-3 px-5">
             <li className='px-3'>About</li>
             <li className='px-3'>Projects</li>
             <li className='px-3'>Contact</li>
