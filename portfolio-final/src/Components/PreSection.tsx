@@ -19,8 +19,7 @@ class PreSection extends React.Component<{ImageToLoad: string}> {
             <img src={ImageToLoad} 
             className='
              object-cover object-center
-            w-full h-auto max-h-64 max-w-full border-solid border-lime-500 rounded-lg'
-            alt="Section Image"  />
+            w-full h-auto max-h-64 max-w-full border-solid border-lime-500 rounded-lg' alt="Section Image"  />
         </div>
         );
     }

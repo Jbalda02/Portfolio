@@ -1,4 +1,3 @@
-import './Styles/NavBarStyle.css'
 import icon from './../assets/light-bulb-svgrepo-com.svg'
 function NavigationBar(){
     return(

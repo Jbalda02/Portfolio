@@ -1,0 +1,124 @@
+{
+    "FrontEndTechnologies": 
+        [
+            {
+                "id": "1",
+                "name": "HTML",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+            },
+            {
+                "id": "2",
+                "name": "CSS",
+                "description": "Cascade Sheet Style",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+            },
+            {
+                "id": "3",
+                "name": "JavaScript",
+                "description": "FrontEnd programming language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+            },
+            {
+                "id": "4",
+                "name": "React",
+                "description": "Frontend Framework",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            },
+            {
+                "id": "5",
+                "name": "Tailwind CSS",
+                "description": "Styling Framework",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+            },
+            {
+                "id": "6",
+                "name": "TypeScript",
+                "description": "FrontEnd type assurance programming language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+            }
+        ],
+
+
+
+    "BackendTechnologies": 
+        [
+            {
+                "id": "1",
+                "name": "ReactRouter/Remix",
+                "description": "React-router library for React",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/React-router_logo.svg"
+            },
+            {
+                "id": "2",
+                "name": "PostgreSQL",
+                "description": "Open Source Database",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+            },
+            {
+                "id": "3",
+                "name": "Docker",
+                "description": "Deployment of web server",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg"
+            },
+            {
+                "id": "4",
+                "name": "APIs",
+                "description": "REST",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Rest_API.svg"
+            },
+            {
+                "id": "5",
+                "name": "AWS",
+                "description": "Amazon Web Services",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+            },
+            {
+                "id": "6",
+                "name": "Node.js/Express",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+            }
+        ],
+
+    "ManagmentTechnologies":[
+        {
+                "id": "1",
+                "name": "Git",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg"
+        },
+        {
+                "id": "2",
+                "name": "Github",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+        },
+        {
+                "id": "3",
+                "name": "Microsoft Teams",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Microsoft_Teams_2018%E2%80%93present_logo.svg"
+        },
+        {
+
+                "id": "4",
+                "name": "Zoom",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Zoom_Communications_Logo.svg"
+        },
+        {
+                "id": "5",
+                "name": "Slack",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg"
+        },
+        {
+                "id": "6",
+                "name": "Figma",
+                "description": "Hypertext Markup Language",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+        }
+    ]
+
+}

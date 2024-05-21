@@ -8,7 +8,7 @@ function Hero() {
                             <h1 className="mt-2 mb-16 text-5xl font-bold tracking-tight text-neutral-100">
                                 Jose Fernando Balda                            
                                 <br /><span className = " text-white font-extralight italic">
-                                Desarollo Web de Calidad
+                                Quality Web Development
                                 </span> 
                             </h1>
                         </div>
