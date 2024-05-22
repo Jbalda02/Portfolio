@@ -1,26 +1,3 @@
-/**function SmallGallery(data: { names: string, image: string }[], titleSG: string) {
-    const { names:string, icons:string } = data;
-
-    return( 
-    <div>
-        <h1>
-            {titleSG}
-        </h1>
-        <div className="grid grid-cols-3 gap-4">
-     
-                {icons.map(index => (
-               
-                        <img key={index} src={icons[index]} alt="icon" className='object-scale-down h-6 w-6' />
-              
-                ))}
-       
-        </div>
-       
-     </div>
-   
-    );
-}
-**/
 interface Technology {
     id: string;
     name: string;
@@ -34,12 +11,12 @@ interface SmallGalleryProps {
   
   const SmallGallery: React.FC<SmallGalleryProps> = ({ technologies, title }) => {
     return (
-      <div>
+      <div className="max-w-64 text-center">
         <h2>{title}</h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 justify-center">
         {technologies.map((tech) => (
-        <div>
-            <img key={tech.id} src={tech.image} alt={tech.name} className='object-scale-down h-6 w-6' />
+        <div className="flex flex-wrap flex-col gap-2 justify-center place-items-center">
+            <img key={tech.id} src={tech.image} alt={tech.name} className='object-scale-down h-6 w-6 justify-center' />
             <span>{tech.name}</span>
         </div>
         ))}

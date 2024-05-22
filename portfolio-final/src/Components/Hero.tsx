@@ -1,7 +1,7 @@
 function Hero() {
     return (
         <section className="">
-            <div className="mb-0 bg-gradient-to-t from-purple-600 to-blue-600 px-6 py-40 text-center ">
+            <div className="mb-0 bg-gradient-to-t from-purple-600 to-blue-600 px-6 py-40 text-center min-h-fit ">
                 <div className="w-100 mx-auto">
                     <div className="grid items-center gap-12">
                         <div className="mt-12 ">

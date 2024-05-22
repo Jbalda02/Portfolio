@@ -42,7 +42,7 @@ function App() {
       <NavigationBar />
       <Hero></Hero>
       <PreSection ImageToLoad={section1image}></PreSection>
-        <div className="grid 3">
+        <div className="flex flex-row m-4 justify-around   gap-12 flex-wrap">
          <SmallGallery technologies={FrontEndTechnologies} title={titleSGFront}></SmallGallery>
          <SmallGallery technologies={BackEndTechnologies} title={titleSGBack}></SmallGallery>
          <SmallGallery technologies={ManagmentTechnologies} title={titleSG}></SmallGallery>
