@@ -7,13 +7,20 @@ import TextSection from "./Components/TextSection";
 import SmallGallery from "./Components/SmallGallery";
 import BigGallery from "./Components/BigGallery";
 import data from './jsons/Technologies.json' assert { type: 'json' };
-
+import projectData from './jsons/projects.json' assert {type: 'json'};
 //Images Imports
-import section1image from "./assets/Images//Asap_React_140120.jpg";
-import section2image from "./assets/Images//Asap_React_140120.jpg";
+import section1image from "./assets/Images/Asap_React_140120.jpg";
+import section2image from "./assets/Images/ksr-banner-5.jpg";
 
-//One Small Gallery is for Technologies Icon that i domain
-//And the other Small Gallery is for small Proyects
+//One Small Gallery is for Technologies Icon that I domain
+//And the other Small Gallery is for small Projects
+interface Project {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  stack?: string;
+}
 interface Technology {
     id: string;
     name: string;
@@ -22,8 +29,8 @@ interface Technology {
 }
 interface TechnologiesData {
     FrontEndTechnologies: Technology[];
-    BackendTechnologies: Technology[];
-    ManagmentTechnologies: Technology[];
+    BackEndTechnologies: Technology[];
+    ManagementTechnologies: Technology[];
 }
 interface SmallGalleryProps {
   technologies: Technology[];
@@ -31,34 +38,35 @@ interface SmallGalleryProps {
 }
 
 function App() {
-  let FrontEndTechnologies = data.FrontEndTechnologies;  
-  let BackEndTechnologies = data.BackendTechnologies;
-  let ManagmentTechnologies = data.ManagmentTechnologies
-  const titleSGFront = "FrontEnd"
-  const titleSGBack = "BackEnd"
-  const titleSG = "Managment Technologies"
+  const FrontEndTechnologies = data.FrontEndTechnologies;  
+  const BackEndTechnologies = data.BackendTechnologies;
+  const ManagementTechnologies = data.ManagmentTechnologies;
+  const titleSGFront = "FrontEnd";
+  const titleSGBack = "BackEnd";
+  const titleSG = "Management Technologies";
 
   return (
     <div className="flex-col">
       <NavigationBar />
-      <Hero></Hero>
+      <Hero />
       <div className="bg-purple-600">
-      <PreSection ImageToLoad={section1image}></PreSection>
-        </div>
-        <div className="flex flex-row  justify-around m-b-3  gap-12 flex-wrap bg-gradient-to-b from-purple-600 via-purple-700 to-blue-800 pb-12">
-         <SmallGallery technologies={FrontEndTechnologies} title={titleSGFront}></SmallGallery>
-         <SmallGallery technologies={BackEndTechnologies} title={titleSGBack}></SmallGallery>
-         <SmallGallery technologies={ManagmentTechnologies} title={titleSG}></SmallGallery>
-        </div>
-        <div className="bg-blue-800">
-      <BigGallery></BigGallery>
+        <PreSection ImageToLoad={section1image} />
+      </div>
+      <div className="flex flex-row justify-around mb-3 gap-12 flex-wrap bg-gradient-to-b from-purple-600 via-purple-700 to-blue-800 pb-12">
+        <SmallGallery technologies={FrontEndTechnologies} title={titleSGFront} />
+        <SmallGallery technologies={BackEndTechnologies} title={titleSGBack} />
+        <SmallGallery technologies={ManagementTechnologies} title={titleSG} />
       </div>
       <div className="bg-blue-800">
-      <PreSection ImageToLoad={section2image}></PreSection>
-     </div>
-      <TextSection></TextSection>
-      <TextSection></TextSection>
-      <Footer></Footer>
+        <BigGallery projects={projectData.projects} />
+      </div>
+      <TextSection />
+      <TextSection />
+      <div className="bg-blue-800">
+        <PreSection ImageToLoad={section2image} />
+        <TextSection />
+      </div>
+      <Footer />
     </div>
   );
 }
