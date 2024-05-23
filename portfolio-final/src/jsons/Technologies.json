@@ -47,7 +47,7 @@
                 "id": "1",
                 "name": "React Router",
                 "description": "React-router library for React",
-                "image": "https://www.loginradius.com/blog/static/a53096b6796dd3d1e3f3df8bc77a6689/03979/index.png"
+                "image": "https://www.svgrepo.com/show/354262/react-router.svg"
             },
             {
                 "id": "2",
@@ -59,13 +59,13 @@
                 "id": "3",
                 "name": "Docker",
                 "description": "Deployment of web server",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg"
+                "image": "https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000"
             },
             {
                 "id": "4",
                 "name": "APIs",
                 "description": "REST",
-                "image": "https://chisellabs.com/glossary/wp-content/uploads/2021/06/What-is-an-API.png"
+                "image": "https://www.svgrepo.com/show/459153/api.svg"
             },
             {
                 "id": "5",
@@ -75,9 +75,9 @@
             },
             {
                 "id": "6",
-                "name": "Node.js/Express",
+                "name": "Node.js",
                 "description": "Hypertext Markup Language",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                "image": "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000"
             }
         ],
 
@@ -86,7 +86,7 @@
                 "id": "1",
                 "name": "Git",
                 "description": "Hypertext Markup Language",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg"
+                "image": "https://img.icons8.com/?size=100&id=20906&format=png&color=000000"
         },
         {
                 "id": "2",
@@ -111,7 +111,7 @@
                 "id": "5",
                 "name": "Slack",
                 "description": "Hypertext Markup Language",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg"
+                "image": "https://www.svgrepo.com/show/452102/slack.svg"
         },
         {
                 "id": "6",
