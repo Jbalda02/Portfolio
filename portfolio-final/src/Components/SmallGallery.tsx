@@ -11,7 +11,7 @@ interface SmallGalleryProps {
 
 const SmallGallery: React.FC<SmallGalleryProps> = ({ technologies, title }) => {
   return (
-    <div className="max-w-70  text-center text-white ">
+    <div className="max-w-70 text-center text-white ">
       <h2 className=" font-bold py-6 text-xl tracking-wide text-neutral-200">
         {title}
       </h2>
