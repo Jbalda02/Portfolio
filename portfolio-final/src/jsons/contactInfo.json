@@ -1,0 +1,25 @@
+{
+    "contactInfo": [
+        {
+            "id": 1,
+            "platform": "LinkedIn",
+            "user_name": "your_linkedin_username",
+            "img_source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png",
+            "link": "https://www.linkedin.com/in/jose-fernando-balda-cañizares-10b224283/"
+        },
+        {
+            "id": 2,
+            "platform": "GitHub",
+            "user_name": "your_github_username",
+            "img_source": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+            "link": "https://github.com/Jbalda02"
+        },
+        {
+            "id": 3,
+            "platform": "Email",
+            "user_name": "jbaldac02@gmail.com",
+            "img_source": "https://w7.pngwing.com/pngs/758/665/png-transparent-new-logo-gmail-google-new-logos-icon-thumbnail.png",
+            "link": "mailto:your_email@example.com"
+        }
+    ]
+}

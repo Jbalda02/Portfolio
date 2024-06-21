@@ -13,7 +13,7 @@ class PreSection extends React.Component<{ImageToLoad: string}> {
     render() {
         const { ImageToLoad } = this.props;
         return (
-        <div className='flex justify-center px-1 py-1'>
+        <div className='flex justify-center px-1 py-0'>
 
 
             <img src={ImageToLoad} 

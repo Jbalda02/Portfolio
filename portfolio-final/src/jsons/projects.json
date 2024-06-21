@@ -1,48 +1,46 @@
 {
-    "projects": 
-        [
-            {
-                "id": "1",
-                "name": "Classic Games Library",
-                "description": "Simple library with some games",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-                "stack": "JavaScript React"
-            },
-            {
-                "id": "2",
-                "name": "Manga reading app",
-                "description": "Reading App using MangaDex API",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
-                ,"stack": "JavaScript React"
-            },
-            {
-                "id": "3",
-                "name": "Scardle",
-                "description": "Wordle Game like of Horror Movies",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-                "stack": "JavaScript React"
-            },
-            {
-                "id": "4",
-                "name": "Api",
-                "description": "Simple API of Ecuador",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-                ,"stack":"NodeJS React"
-            },
-            {
-                "id": "5",
-                "name": "Tic Tac Toe",
-                "description": "Game of Tic Tac Toe",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                ,"stack":"React"
-            },
-            {
-                "id": "6",
-                "name": "Shooting Game",
-                "description": "3D Shooting Game made with Unity3D",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-                "Stack": "Unity, C#"
-            }
-        ]
-
-    }
+    "projects": [
+        {
+            "id": "1",
+            "name": "Classic Games Library",
+            "description": "Simple library with some games",
+            "image": "https://cdn-icons-png.flaticon.com/512/5088/5088474.png",
+            "stack": "JavaScript React"
+        },
+        {
+            "id": "2",
+            "name": "Manga reading app",
+            "description": "Reading App using MangaDex API",
+            "image": "https://www.svgrepo.com/show/331479/mangadex-v2.svg",
+            "stack": "JavaScript React"
+        },
+        {
+            "id": "3",
+            "name": "Scardle",
+            "description": "Wordle Game like of Horror Movies",
+            "image": "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg",
+            "stack": "JavaScript React"
+        },
+        {
+            "id": "4",
+            "name": "Api",
+            "description": "Simple API of Ecuador",
+            "image": "https://i.pinimg.com/originals/eb/c9/2a/ebc92a6cfa8d2a66434d6386a6cce237.png",
+            "stack": "NodeJS React"
+        },
+        {
+            "id": "5",
+            "name": "Tic Tac Toe",
+            "description": "Game of Tic Tac Toe",
+            "image": "https://cdn-icons-png.flaticon.com/512/10199/10199746.png",
+            "stack": "React"
+        },
+        {
+            "id": "6",
+            "name": "Shooting Game",
+            "description": "3D Shooting Game made with Unity3D",
+            "image": "https://opengameart.org/sites/default/files/Preview_5_0.png",
+            "stack": "Unity, C#"
+        }
+    ]
+}
