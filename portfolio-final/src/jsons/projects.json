@@ -12,7 +12,7 @@
             "id": "2",
             "name": "Classic To Do App",
             "description": "Task and Schedule Mannager",
-            "image": "./src/assets/Icons/check.png",
+            "image": "https://w7.pngwing.com/pngs/32/64/png-transparent-to-do-list-notebook-computer-icons-action-item-task-android-to-do-list-icon-miscellaneous-angle-text-thumbnail.png",
             "stack": "JavaScript React",
             "link": "https://todo-app-nu-sandy.vercel.app"
 
