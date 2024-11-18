@@ -14,6 +14,10 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
   if (!projects || !Array.isArray(projects)) {
     return <div>No projects available</div>;
   }
+  const loadimg = (project:Project) => {
+    const imgLink = project.image
+    return imgLink
+  }
 
   return (
     <div>
@@ -31,7 +35,7 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
             <a href={project.link? project.link :"#"}
             >
             <img
-              src={project.image}
+              src={loadimg(project)}
               alt={project.name}
               className="object-scale-down h-64 w-64 justify-center max-w-70"
             />
