@@ -1,4 +1,3 @@
-import icon from './../assets//Icons/light-bulb-svgrepo-com.svg'
 function NavigationBar(){
     return(
         <div className="min-w-full flex justify-between px-6 lg:px-32 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold fixed top-0">
