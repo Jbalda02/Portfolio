@@ -4,6 +4,7 @@ interface Project {
   description: string;
   image: string;
   stack: string;
+  link: string;
 }
 
 interface ProjectsProps {
@@ -27,6 +28,8 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
             key={project.id}
             className="flex flex-wrap flex-col gap-12 justify-center place-items-center py-2"
           >
+            <a href={project.link? project.link :"#"}
+            >
             <img
               src={project.image}
               alt={project.name}
@@ -35,6 +38,8 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
             <span className="text-neutral-200 font-bold">
               {project.description}
             </span>
+            </a>
+
           </div>
         ))}
       </div>

@@ -9,7 +9,7 @@ const tmpText:string = (text==undefined) ?  "No estoy definido": text ;
 const tmpTitle:string = (title==undefined) ?  "No estoy definido": title ;
 
     return(
-    <div className="grid grid-rows row-auto gap-4 place-items-center items-center bg-gradient-to-b from-purple-700 via-purple-600  to-purple-700  text-5xl text-left " >
+    <div className="py-4 grid grid-rows row-auto gap-4 place-items-center items-center bg-gradient-to-b from-purple-700 via-purple-600  to-purple-700  text-5xl text-left " >
         
         <span className=" row-span-1 font-bold py-6 text-xl tracking-wide text-neutral-200" >{tmpTitle}</span>
         
