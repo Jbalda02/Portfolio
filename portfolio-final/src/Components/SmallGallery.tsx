@@ -22,7 +22,7 @@ const SmallGallery: React.FC<SmallGalleryProps> = ({ technologies, title }) => {
               key={tech.id}
               src={tech.image}
               alt={tech.name}
-              className="object-scale-down h-8 w-8 justify-center"
+              className="object-scale-down h-8 w-8 self-center justify-center"
             />
             <span>{tech.name}</span>
           </div>
