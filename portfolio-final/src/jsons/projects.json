@@ -21,7 +21,7 @@
             "id": "3",
             "name": "Nene Cakes",
             "description": "Fake landing page of full functionality of a bakery",
-            "image": "./src/assets/Icons/logo.jpg",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSydtNXWU2HpfVzaASW-jQSrW68cVhAX_ZC0Q&s",
             "stack": "JavaScript React",
             "link": "#"
         },
@@ -29,7 +29,7 @@
             "id": "4",
             "name": "Oracle of Bacon copy",
             "description": "Made in Java with an download Movie DB",
-            "image": "./src/assets/Icons/bacon-graph.jpg",
+            "image": "https://oracleofbacon.org/images/bacon-graph.jpg",
             "stack": "Java",
             "link": "https://github.com/Jbalda02/OracleOfBacon-EstDatos2"
 
@@ -38,7 +38,7 @@
             "id": "5",
             "name": "Portafolio",
             "description": "This Portafolio you are looking at!",
-            "image": "./src/assets/Icons/portafolio.png",
+            "image": "https://img.freepik.com/vector-premium/portafolio-portafolio-aislado-icono_24908-26950.jpg",
             "stack": "React",
             "link": "https://github.com/Jbalda02/OracleOfBacon-EstDatos2"
 
