@@ -7,8 +7,6 @@ function NavigationBar(){
             <li className='px-3'>About</li>
             <li className='px-3'>Projects</li>
             <li className='px-3'>Contact</li>
-            <img src={icon} alt="icon" className='object-scale-down h-6 w-6' />
-
       </ol>
     </div>
     );
