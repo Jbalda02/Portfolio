@@ -14,8 +14,8 @@ const tmpTitle:string = (title==undefined) ?  "No estoy definido": title ;
         <span className=" row-span-1 font-bold py-6 text-xl tracking-wide text-neutral-200" >{tmpTitle}</span>
         
         <div className="row-span-2 flex flex-row min-w-full justify-center gap-64">
-            <img className="object-scale-down h-96  w-96 justify-center rounded-lg" src={tmpImgSrc}></img>
-            <span className="text-white font-nunito text-2xl p-2 break-normal max-w-3xl ">{tmpText}</span>
+            <img className="object-scale-down h-96  w-96 justify-center rounded-full" src={tmpImgSrc}></img>
+            <span className="text-white font-nunito text-2xl p-2 break-normal max-w-3xl align-text-top ">{tmpText}</span>
         
         </div>
 

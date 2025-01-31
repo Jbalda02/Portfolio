@@ -12,7 +12,7 @@
             "id": "2",
             "name": "Classic To Do App",
             "description": "Task and Schedule Mannager",
-            "image": "https://w7.pngwing.com/pngs/32/64/png-transparent-to-do-list-notebook-computer-icons-action-item-task-android-to-do-list-icon-miscellaneous-angle-text-thumbnail.png",
+            "image": "https://cdn.pixabay.com/photo/2016/03/31/19/50/checklist-1295319_640.png",
             "stack": "JavaScript React",
             "link": "https://todo-app-nu-sandy.vercel.app"
 
@@ -21,7 +21,7 @@
             "id": "3",
             "name": "Nene Cakes",
             "description": "Fake landing page of full functionality of a bakery",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSydtNXWU2HpfVzaASW-jQSrW68cVhAX_ZC0Q&s",
+            "image": "https://cdn-icons-png.flaticon.com/512/57/57589.png",
             "stack": "JavaScript React",
             "link": "https://cake-landing-page-pi.vercel.app/?vercelToolbarCode=cU643htIX1ihnMEhttps://cake-landing-page-pi.vercel.app/?vercelToolbarCode=cU643htIX1ihnME"
         },
@@ -29,7 +29,7 @@
             "id": "4",
             "name": "Oracle of Bacon copy",
             "description": "Made in Java with an download Movie DB",
-            "image": "https://oracleofbacon.org/images/bacon-graph.jpg",
+            "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_h38wpC7LzrA5e8a4py_FZZhxffjgE6EiopC_cIfEsqkI3181wkGHigDhyphenhyphenr6IMDQcAIBipDIERFxN_N3S4z2DtLv15k-97VgS88DV-mDffUvNCzqbGh98qhV1hg9jE1Y_6fRn6RfnF9E/w1200-h630-p-k-no-nu/bacon-number.png",
             "stack": "Java",
             "link": "https://github.com/Jbalda02/OracleOfBacon-EstDatos2"
 
@@ -38,7 +38,7 @@
             "id": "5",
             "name": "Portafolio",
             "description": "This Portafolio you are looking at!",
-            "image": "https://img.freepik.com/vector-premium/portafolio-portafolio-aislado-icono_24908-26950.jpg",
+            "image": "https://www.4itn.mx/wp-content/uploads/2022/11/Portafolio-4it.png",
             "stack": "React",
             "link": "https://github.com/Jbalda02/OracleOfBacon-EstDatos2"
 
