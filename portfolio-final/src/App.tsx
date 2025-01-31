@@ -22,7 +22,7 @@ function App() {
   const titleSGBack = "BackEnd";
   const titleSG = "Other Technologies";
   
-  const aboutmeText = "I am a Computer Science student, with a passion for web development. I have experience in the development of web applications using technologies such as React, Node.js, and Tailwind Css. I am always looking to learn new technologies and improve my skills. I am currently looking for opportunities to work as a web developer.";
+  const aboutmeText = "I am a Freelancer Web Developer and Currently a Computer Science Student, with a passion for web development. I have experience in the development of web applications using technologies such as React, Node.js, and Tailwind Css. I am always looking to learn new technologies and improve my skills. I am currently looking for opportunities to work as a web developer.";
   const letsConnnect = " Lets Connect! And Start doing projects together, I am always looking for new opportunities to grow as a person and as a professional. You can contact me through my email or my social networks. I am always open to new challenges and opportunities.";
   const contactImg = "https://cdn-icons-png.flaticon.com/512/493/493808.png";
   return (
