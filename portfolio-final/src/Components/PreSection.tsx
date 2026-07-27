@@ -13,13 +13,13 @@ class PreSection extends React.Component<{ImageToLoad: string}> {
     render() {
         const { ImageToLoad } = this.props;
         return (
-        <div className='flex justify-center px-1 py-0'>
+        <div className='flex justify-center px-4 py-0'>
 
 
-            <img src={ImageToLoad} 
+            <img src={ImageToLoad}
             className='
              object-cover object-center
-            w-full h-auto max-h-64 max-w-full border-solid border-lime-500 rounded-lg' alt="Section Image"  />
+            w-full h-auto max-h-40 sm:max-h-56 lg:max-h-64 max-w-full border-solid border-lime-500 rounded-lg' alt="Section Image"  />
         </div>
         );
     }

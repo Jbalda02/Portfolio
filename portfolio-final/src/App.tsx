@@ -32,7 +32,7 @@ function App() {
       <div className="bg-purple-600">
         <PreSection ImageToLoad={section1image} />
       </div>
-      <div className="flex flex-row justify-around gap-12 flex-wrap bg-gradient-to-b from-purple-600 via-purple-700 to-blue-800 pb-12">
+      <div className="flex flex-col sm:flex-row justify-around gap-8 sm:gap-12 flex-wrap px-4 bg-gradient-to-b from-purple-600 via-purple-700 to-blue-800 pb-12">
         <SmallGallery technologies={FrontEndTechnologies} title={titleSGFront} />
         <SmallGallery technologies={BackendTechnologies} title={titleSGBack} />
         <SmallGallery technologies={ManagementTechnologies} title={titleSG} />

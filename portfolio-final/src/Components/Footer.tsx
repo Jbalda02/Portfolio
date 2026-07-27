@@ -16,7 +16,7 @@ function Footer({ contactInfo }:parentContactInfo) {
     const tmpContactInfoData = contactInfo;
     return (
         
-            <ul className="flex content-center justify-center min-w-full flex-wrap gap-9 min-h-52 bg-gradient-to-b from-purple-700 to to-blue-950">
+            <ul className="flex content-center items-center justify-center w-full flex-wrap gap-6 sm:gap-9 px-4 py-10 min-h-52 bg-gradient-to-b from-purple-700 to to-blue-950">
                 { tmpContactInfoData.map((contact) => (
                         <li key={contact.id}>
                         <a href={contact.link}>                            
