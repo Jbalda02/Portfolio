@@ -1,29 +1,69 @@
+import { useEffect, useRef, useState } from "react";
 
-import React from 'react';
+type PreSectionProps = {
+  ImageToLoad: string;
+  /** How far the image drifts against the scroll, in px. */
+  strength?: number;
+};
 
-class PreSection extends React.Component<{ImageToLoad: string}> {
-    constructor(props: {ImageToLoad: string}) {
-        super(props);
-        this.state = {
-        };
-    }
+/**
+ * Full-bleed banner with a light parallax drift. The image is dimmed and
+ * masked at the edges so the stock art blends into the dark page instead of
+ * sitting on it as a bright block.
+ */
+function PreSection({ ImageToLoad, strength = 60 }: PreSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(0);
 
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    let frame = 0;
 
-    render() {
-        const { ImageToLoad } = this.props;
-        return (
-        <div className='flex justify-center px-4 py-0'>
+    const update = () => {
+      frame = 0;
+      const rect = node.getBoundingClientRect();
+      const viewport = window.innerHeight;
+      if (rect.bottom < 0 || rect.top > viewport) return;
+      // -1 when the banner is entering, +1 when it is leaving.
+      const progress = (rect.top + rect.height / 2 - viewport / 2) / viewport;
+      setOffset(progress * strength);
+    };
 
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
 
-            <img src={ImageToLoad}
-            className='
-             object-cover object-center
-            w-full h-auto max-h-40 sm:max-h-56 lg:max-h-64 max-w-full border-solid border-lime-500 rounded-lg' alt="Section Image"  />
-        </div>
-        );
-    }
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [strength]);
+
+  return (
+    <div
+      ref={ref}
+      className="relative h-40 overflow-hidden sm:h-56 lg:h-64"
+      aria-hidden="true"
+    >
+      <img
+        src={ImageToLoad}
+        alt=""
+        loading="lazy"
+        style={{ transform: `translate3d(0, ${offset}px, 0) scale(1.18)` }}
+        className="mask-fade-y h-full w-full object-cover object-center opacity-25 will-change-transform"
+      />
+      {/* Violet wash + top/bottom fade into the page background. */}
+      <div className="absolute inset-0 bg-brand-dim/20 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-800 via-transparent to-ink-800" />
+    </div>
+  );
 }
 
 export default PreSection;
-/* Add State and make it a class */
