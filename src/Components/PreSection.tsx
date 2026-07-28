@@ -20,23 +20,39 @@ function PreSection({ ImageToLoad, strength = 60 }: PreSectionProps) {
     if (!node) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    // Tied 1:1 to scroll position, this used to jump in the same discrete
+    // steps as the wheel/trackpad. Chasing a target with a lerp instead turns
+    // that into a continuous drift, which is what actually reads as smooth.
+    let target = 0;
+    let current = 0;
     let frame = 0;
 
-    const update = () => {
-      frame = 0;
+    const measure = () => {
       const rect = node.getBoundingClientRect();
       const viewport = window.innerHeight;
       if (rect.bottom < 0 || rect.top > viewport) return;
       // -1 when the banner is entering, +1 when it is leaving.
       const progress = (rect.top + rect.height / 2 - viewport / 2) / viewport;
-      setOffset(progress * strength);
+      target = progress * strength;
+    };
+
+    const tick = () => {
+      current += (target - current) * 0.09;
+      setOffset(current);
+      if (Math.abs(target - current) > 0.05) {
+        frame = requestAnimationFrame(tick);
+      } else {
+        frame = 0;
+      }
     };
 
     const onScroll = () => {
-      if (!frame) frame = requestAnimationFrame(update);
+      measure();
+      if (!frame) frame = requestAnimationFrame(tick);
     };
 
-    update();
+    measure();
+    tick();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
     return () => {

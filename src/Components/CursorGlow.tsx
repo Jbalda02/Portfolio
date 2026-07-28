@@ -15,16 +15,23 @@ function CursorGlow() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!finePointer || reduced) return;
 
-    // Start off-centre so the halo eases in rather than popping at 0,0.
     let targetX = window.innerWidth / 2;
     let targetY = window.innerHeight / 3;
     let x = targetX;
     let y = targetY;
     let frame = 0;
+    let hasMoved = false;
 
     const onMove = (event: PointerEvent) => {
       targetX = event.clientX;
       targetY = event.clientY;
+      if (!hasMoved) {
+        // First move: snap straight to the pointer instead of lerping in from
+        // the centre of the screen, which used to read as a fast streak.
+        x = targetX;
+        y = targetY;
+        hasMoved = true;
+      }
       node.style.opacity = "1";
     };
 
@@ -33,9 +40,9 @@ function CursorGlow() {
     };
 
     const tick = () => {
-      // Lerp towards the pointer so the halo lags slightly behind it.
-      x += (targetX - x) * 0.08;
-      y += (targetY - y) * 0.08;
+      // Lerp towards the pointer so the halo trails a little behind it.
+      x += (targetX - x) * 0.14;
+      y += (targetY - y) * 0.14;
       node.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
       frame = requestAnimationFrame(tick);
     };

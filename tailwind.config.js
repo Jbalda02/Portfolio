@@ -41,7 +41,7 @@ export default {
       },
       keyframes: {
         'fade-up': {
-          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '0%': { opacity: '0', transform: 'translateY(18px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         'fade-in': {
@@ -68,7 +68,7 @@ export default {
         },
       },
       animation: {
-        'fade-up': 'fade-up .8s cubic-bezier(.22,1,.36,1) both',
+        'fade-up': 'fade-up 1.1s cubic-bezier(.16,.84,.24,1) both',
         'fade-in': 'fade-in 1.1s ease-out both',
         float: 'float 7s ease-in-out infinite',
         aurora: 'aurora 24s ease-in-out infinite',
