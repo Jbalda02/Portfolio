@@ -32,7 +32,7 @@ function Hero() {
             <span
               key={word}
               className="inline-block animate-fade-up"
-              style={{ animationDelay: `${180 + index * 110}ms` }}
+              style={{ animationDelay: `${260 + index * 170}ms` }}
             >
               {word}
               {index < nameWords.length - 1 && " "}
@@ -43,7 +43,7 @@ function Hero() {
               <span
                 key={word}
                 className="inline-block animate-fade-up text-gradient-brand"
-                style={{ animationDelay: `${520 + index * 110}ms` }}
+                style={{ animationDelay: `${820 + index * 170}ms` }}
               >
                 {word}
                 {index < taglineWords.length - 1 && " "}
@@ -54,7 +54,7 @@ function Hero() {
 
         <p
           className="mx-auto mt-7 max-w-xl animate-fade-up text-balance text-sm leading-relaxed text-mist sm:mt-9 sm:text-base"
-          style={{ animationDelay: "900ms" }}
+          style={{ animationDelay: "1420ms" }}
         >
           Freelance web developer and Computer Science student, building fast and
           accessible interfaces with React, TypeScript and Tailwind CSS.
@@ -62,18 +62,18 @@ function Hero() {
 
         <div
           className="mt-9 flex animate-fade-up flex-col items-center justify-center gap-3 sm:mt-11 sm:flex-row"
-          style={{ animationDelay: "1040ms" }}
+          style={{ animationDelay: "1650ms" }}
         >
           <a
             href="#projects"
-            className="group relative w-full overflow-hidden rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-12px_rgba(139,92,246,.9)] transition-transform duration-300 hover:-translate-y-0.5 sm:w-auto"
+            className="group relative w-full overflow-hidden rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-12px_rgba(139,92,246,.9)] transition-transform duration-500 hover:-translate-y-0.5 sm:w-auto"
           >
             <span className="relative z-10">View my work</span>
-            <span className="absolute inset-0 -z-0 bg-gradient-to-r from-brand via-brand-soft to-spark opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <span className="absolute inset-0 -z-0 bg-gradient-to-r from-brand via-brand-soft to-spark opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
           </a>
           <a
             href="#contact"
-            className="w-full rounded-full border border-edge-bright px-7 py-3 text-sm font-semibold text-chalk transition-colors duration-300 hover:border-brand hover:text-brand-soft sm:w-auto"
+            className="w-full rounded-full border border-edge-bright px-7 py-3 text-sm font-semibold text-chalk transition-colors duration-500 hover:border-brand hover:text-brand-soft sm:w-auto"
           >
             Get in touch
           </a>

@@ -48,12 +48,12 @@ function Footer({ contactInfo }: FooterProps) {
                     rel="noopener noreferrer"
                     aria-label={contact.platform}
                     title={contact.user_name}
-                    className="group flex h-12 w-12 items-center justify-center rounded-full border border-edge bg-ink-600/60 text-mist transition-all duration-300 hover:-translate-y-1 hover:border-brand/60 hover:text-brand-soft hover:shadow-[0_12px_30px_-12px_rgba(139,92,246,.8)]"
+                    className="group flex h-12 w-12 items-center justify-center rounded-full border border-edge bg-ink-600/60 text-mist transition-all duration-500 hover:-translate-y-1 hover:border-brand/60 hover:text-brand-soft hover:shadow-[0_12px_30px_-12px_rgba(139,92,246,.8)]"
                   >
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+                      className="h-5 w-5 transition-transform duration-500 group-hover:scale-110"
                       aria-hidden="true"
                     >
                       <path d={ICONS[contact.platform] ?? ICONS.Email} />

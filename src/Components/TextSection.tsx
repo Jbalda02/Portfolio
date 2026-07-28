@@ -38,7 +38,7 @@ function TextSection({
             {/* Soft violet halo behind the image. */}
             <div
               aria-hidden="true"
-              className="absolute -inset-6 rounded-full bg-brand/20 blur-3xl transition-opacity duration-700 group-hover:opacity-80"
+              className="absolute -inset-6 rounded-full bg-brand/20 blur-3xl transition-opacity duration-1000 group-hover:opacity-80"
             />
             <img
               src={imgSrc}

@@ -118,11 +118,11 @@ function App() {
           >
             <a
               href="mailto:jbaldac02@gmail.com"
-              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-12px_rgba(139,92,246,.9)] transition-transform duration-300 hover:-translate-y-0.5"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-12px_rgba(139,92,246,.9)] transition-transform duration-500 hover:-translate-y-0.5"
             >
               jbaldac02@gmail.com
               <svg
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

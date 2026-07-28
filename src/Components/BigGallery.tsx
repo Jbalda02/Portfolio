@@ -26,7 +26,7 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
             href={project.link || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-edge bg-ink-600/60 transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/50 hover:shadow-[0_24px_70px_-24px_rgba(139,92,246,.55)]"
+            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-edge bg-ink-600/60 transition-all duration-700 hover:-translate-y-1.5 hover:border-brand/50 hover:shadow-[0_24px_70px_-24px_rgba(139,92,246,.55)]"
           >
             {/*
               Project art is mixed-media clipart on transparent backgrounds, so
@@ -37,7 +37,7 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
                 src={project.image}
                 alt={project.name}
                 loading="lazy"
-                className="h-3/5 w-3/5 object-contain transition-transform duration-700 group-hover:scale-110"
+                className="h-3/5 w-3/5 object-contain transition-transform duration-1000 group-hover:scale-110"
               />
               {/* Light sweep on hover. */}
               <span className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-white/50 opacity-0 blur-md group-hover:animate-sheen group-hover:opacity-100" />
@@ -45,11 +45,11 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
 
             <div className="flex flex-1 flex-col gap-3 p-5">
               <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-300 group-hover:text-brand-soft">
+                <h3 className="font-display text-lg font-semibold leading-snug text-chalk transition-colors duration-500 group-hover:text-brand-soft">
                   {project.name}
                 </h3>
                 <svg
-                  className="mt-1 h-4 w-4 shrink-0 text-dusk transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
+                  className="mt-1 h-4 w-4 shrink-0 text-dusk transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -73,7 +73,7 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
                   .map((tech) => (
                     <li
                       key={tech}
-                      className="rounded-full border border-edge bg-ink-500/60 px-2.5 py-1 text-[11px] font-medium text-mist transition-colors duration-300 group-hover:border-brand/30 group-hover:text-brand-soft"
+                      className="rounded-full border border-edge bg-ink-500/60 px-2.5 py-1 text-[11px] font-medium text-mist transition-colors duration-500 group-hover:border-brand/30 group-hover:text-brand-soft"
                     >
                       {tech}
                     </li>

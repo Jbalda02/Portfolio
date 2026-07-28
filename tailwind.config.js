@@ -50,7 +50,7 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-14px)' },
+          '50%': { transform: 'translateY(-12px)' },
         },
         aurora: {
           '0%, 100%': { transform: 'translate3d(0, 0, 0) scale(1)' },
@@ -68,12 +68,12 @@ export default {
         },
       },
       animation: {
-        'fade-up': 'fade-up 1.1s cubic-bezier(.16,.84,.24,1) both',
-        'fade-in': 'fade-in 1.1s ease-out both',
-        float: 'float 7s ease-in-out infinite',
-        aurora: 'aurora 24s ease-in-out infinite',
-        sheen: 'sheen 1.1s ease-out',
-        'scroll-hint': 'scroll-hint 2.2s ease-in-out infinite',
+        'fade-up': 'fade-up 1.6s cubic-bezier(.16,.84,.24,1) both',
+        'fade-in': 'fade-in 1.6s ease-out both',
+        float: 'float 10s ease-in-out infinite',
+        aurora: 'aurora 34s ease-in-out infinite',
+        sheen: 'sheen 1.6s ease-out',
+        'scroll-hint': 'scroll-hint 3s ease-in-out infinite',
       },
     },
   },

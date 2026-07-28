@@ -49,7 +49,7 @@ function Reveal({ children, delay = 0, className = "" }: RevealProps) {
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-[opacity,transform] duration-[1100ms] ease-[cubic-bezier(.16,.84,.24,1)] will-change-[opacity,transform] ${
+      className={`transition-[opacity,transform] duration-[1700ms] ease-[cubic-bezier(.16,.84,.24,1)] will-change-[opacity,transform] ${
         shown ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
       } ${className}`}
     >

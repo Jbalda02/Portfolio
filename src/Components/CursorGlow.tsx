@@ -41,8 +41,8 @@ function CursorGlow() {
 
     const tick = () => {
       // Lerp towards the pointer so the halo trails a little behind it.
-      x += (targetX - x) * 0.14;
-      y += (targetY - y) * 0.14;
+      x += (targetX - x) * 0.06;
+      y += (targetY - y) * 0.06;
       node.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
       frame = requestAnimationFrame(tick);
     };

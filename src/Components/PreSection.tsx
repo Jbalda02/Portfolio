@@ -37,7 +37,7 @@ function PreSection({ ImageToLoad, strength = 60 }: PreSectionProps) {
     };
 
     const tick = () => {
-      current += (target - current) * 0.09;
+      current += (target - current) * 0.045;
       setOffset(current);
       if (Math.abs(target - current) > 0.05) {
         frame = requestAnimationFrame(tick);
