@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../Components/Reveal";
+import { useLanguage } from "../i18n/context";
 
 // Set by the person deploying this site: create a form at formspree.io
 // pointed at your inbox, then put its ID in VITE_FORMSPREE_ID (see .env.example).
@@ -12,6 +13,7 @@ type Status = "idle" | "sending" | "success" | "error";
 
 function Contact() {
   const [status, setStatus] = useState<Status>("idle");
+  const { t } = useLanguage();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -61,22 +63,20 @@ function Contact() {
           >
             <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>
-          Back to portfolio
+          {t.contactPage.back}
         </Link>
 
         <div className="rounded-2xl border border-edge bg-ink-600/60 p-6 backdrop-blur-sm sm:p-8">
           <h1 className="font-display text-2xl font-bold tracking-tight text-chalk sm:text-3xl">
-            Send me a message
+            {t.contactPage.title}
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-mist">
-            Tell me a bit about your project or opportunity and I&apos;ll get back to you by email.
+            {t.contactPage.subtitle}
           </p>
 
           {!ENDPOINT ? (
             <div className="mt-8 rounded-xl border border-edge-bright bg-ink-500/40 p-5 text-sm text-mist">
-              <p>
-                This form isn&apos;t connected yet — please reach out directly instead:
-              </p>
+              <p>{t.contactPage.notConnected}</p>
               <a
                 href="mailto:jbaldac02@gmail.com"
                 className="mt-2 inline-block font-semibold text-brand-soft transition-colors duration-500 hover:text-chalk"
@@ -86,14 +86,14 @@ function Contact() {
             </div>
           ) : status === "success" ? (
             <div className="mt-8 rounded-xl border border-brand/30 bg-brand/10 p-5 text-sm text-chalk">
-              <p className="font-semibold">Message sent — thank you!</p>
-              <p className="mt-1 text-mist">I&apos;ll reply to you by email as soon as I can.</p>
+              <p className="font-semibold">{t.contactPage.successTitle}</p>
+              <p className="mt-1 text-mist">{t.contactPage.successBody}</p>
               <button
                 type="button"
                 onClick={() => setStatus("idle")}
                 className="mt-4 text-sm font-semibold text-brand-soft underline decoration-edge-bright underline-offset-4 transition-colors duration-500 hover:text-chalk"
               >
-                Send another message
+                {t.contactPage.sendAnother}
               </button>
             </div>
           ) : (
@@ -107,11 +107,11 @@ function Contact() {
                 className="hidden"
                 aria-hidden="true"
               />
-              <input type="hidden" name="_subject" value="New message from your portfolio" />
+              <input type="hidden" name="_subject" value={t.contactPage.subject} />
 
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm font-medium text-mist">
-                  Name
+                  {t.contactPage.name}
                 </label>
                 <input
                   id="name"
@@ -120,13 +120,13 @@ function Contact() {
                   required
                   autoComplete="name"
                   className="w-full rounded-xl border border-edge bg-ink-800/60 px-4 py-2.5 text-sm text-chalk placeholder:text-dusk focus:border-brand focus:outline-none"
-                  placeholder="Your name"
+                  placeholder={t.contactPage.namePlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="mb-2 block text-sm font-medium text-mist">
-                  Email
+                  {t.contactPage.email}
                 </label>
                 <input
                   id="email"
@@ -135,13 +135,13 @@ function Contact() {
                   required
                   autoComplete="email"
                   className="w-full rounded-xl border border-edge bg-ink-800/60 px-4 py-2.5 text-sm text-chalk placeholder:text-dusk focus:border-brand focus:outline-none"
-                  placeholder="you@example.com"
+                  placeholder={t.contactPage.emailPlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="mb-2 block text-sm font-medium text-mist">
-                  Message
+                  {t.contactPage.message}
                 </label>
                 <textarea
                   id="message"
@@ -149,17 +149,17 @@ function Contact() {
                   required
                   rows={5}
                   className="w-full resize-none rounded-xl border border-edge bg-ink-800/60 px-4 py-2.5 text-sm text-chalk placeholder:text-dusk focus:border-brand focus:outline-none"
-                  placeholder="What would you like to build?"
+                  placeholder={t.contactPage.messagePlaceholder}
                 />
               </div>
 
               {status === "error" && (
                 <p className="text-sm text-red-400">
-                  Something went wrong sending that — please try again, or email{" "}
+                  {t.contactPage.errorPrefix}{" "}
                   <a href="mailto:jbaldac02@gmail.com" className="underline">
                     jbaldac02@gmail.com
                   </a>{" "}
-                  directly.
+                  {t.contactPage.errorSuffix}
                 </p>
               )}
 
@@ -168,7 +168,7 @@ function Contact() {
                 disabled={status === "sending"}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-12px_rgba(139,92,246,.9)] transition-transform duration-500 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
               >
-                {status === "sending" ? "Sending…" : "Send message"}
+                {status === "sending" ? t.contactPage.sending : t.contactPage.submit}
               </button>
             </form>
           )}

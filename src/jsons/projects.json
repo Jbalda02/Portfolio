@@ -4,6 +4,7 @@
             "id": "1",
             "name": "Classic Games Library",
             "description": "Simple library with some games",
+            "description_es": "Librería sencilla con algunos juegos clásicos",
             "image": "",
             "stack": "JavaScript React",
             "link": "https://classic-games-gallery-lpw7-q6saifpmc-jbalda02s-projects.vercel.app"
@@ -12,6 +13,7 @@
             "id": "2",
             "name": "Classic To Do App",
             "description": "Task and Schedule Mannager",
+            "description_es": "Gestor de tareas y horarios",
             "image": "",
             "stack": "JavaScript React",
             "link": "https://todo-app-nu-sandy.vercel.app"
@@ -21,6 +23,7 @@
             "id": "3",
             "name": "Nene Cakes",
             "description": "Fake landing page of full functionality of a bakery",
+            "description_es": "Landing page ficticia y completamente funcional de una pastelería",
             "image": "./src/assets/Images/nenecakes.png",
             "stack": "JavaScript React",
             "link": "https://cake-landing-page-jbalda02s-projects.vercel.app"
@@ -29,6 +32,7 @@
             "id": "4",
             "name": "Oracle of Bacon copy",
             "description": "Made in Java with an download Movie DB",
+            "description_es": "Hecho en Java con una base de datos de películas descargada",
             "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_h38wpC7LzrA5e8a4py_FZZhxffjgE6EiopC_cIfEsqkI3181wkGHigDhyphenhyphenr6IMDQcAIBipDIERFxN_N3S4z2DtLv15k-97VgS88DV-mDffUvNCzqbGh98qhV1hg9jE1Y_6fRn6RfnF9E/w1200-h630-p-k-no-nu/bacon-number.png",
             "stack": "Java",
             "link": "https://github.com/Jbalda02/OracleOfBacon-EstDatos2"
@@ -38,6 +42,7 @@
             "id": "5",
             "name": "Portafolio",
             "description": "This Portafolio you are looking at!",
+            "description_es": "¡Este mismo portafolio que estás viendo!",
             "image": "",
             "stack": "React",
             "link": "https://github.com/Jbalda02/Portfolio"
@@ -47,6 +52,7 @@
             "id": "6",
             "name": "Shooting Game",
             "description": "3D Shooting Game made with Unity3D",
+            "description_es": "Juego de disparos en 3D hecho con Unity3D",
             "image": "https://opengameart.org/sites/default/files/Preview_5_0.png",
             "stack": "Unity, C#",
             "link": "https://github.com/Jbalda02/Creation1"

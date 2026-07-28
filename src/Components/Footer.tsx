@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { useLanguage } from "../i18n/context";
 
 type ContactInfo = {
   id: number;
@@ -26,6 +27,8 @@ const ICONS: Record<string, string> = {
 };
 
 function Footer({ contactInfo }: FooterProps) {
+  const { t } = useLanguage();
+
   return (
     <footer
       id="contact-footer"
@@ -64,8 +67,8 @@ function Footer({ contactInfo }: FooterProps) {
             </ul>
 
             <p className="text-center text-xs text-dusk">
-              &copy; {new Date().getFullYear()} Jose Fernando Balda. Built with
-              React, TypeScript and Tailwind CSS.
+              &copy; {new Date().getFullYear()} Jose Fernando Balda.{" "}
+              {t.footer.builtWith}
             </p>
           </div>
         </Reveal>

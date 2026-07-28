@@ -1,9 +1,12 @@
 import Reveal from "./Reveal";
+import { useLanguage } from "../i18n/context";
 
 interface Project {
   id: string;
   name: string;
   description: string;
+  /** Optional Spanish copy; falls back to `description` when missing. */
+  description_es?: string;
   image: string;
   stack: string;
   link: string;
@@ -14,8 +17,10 @@ interface ProjectsProps {
 }
 
 const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
+  const { lang, t } = useLanguage();
+
   if (!projects || !Array.isArray(projects)) {
-    return <p className="text-center text-mist">No projects available</p>;
+    return <p className="text-center text-mist">{t.projects.empty}</p>;
   }
 
   return (
@@ -63,7 +68,9 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
               </div>
 
               <p className="text-sm leading-relaxed text-mist">
-                {project.description}
+                {lang === "es"
+                  ? project.description_es ?? project.description
+                  : project.description}
               </p>
 
               <ul className="mt-auto flex flex-wrap gap-1.5 pt-2">

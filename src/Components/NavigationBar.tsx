@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../i18n/context";
 
 const links = [
-  { label: "About", to: "/#about" },
-  { label: "Projects", to: "/#projects" },
-  { label: "Contact", to: "/contact" },
-];
+  { key: "about", to: "/#about" },
+  { key: "projects", to: "/#projects" },
+  { key: "contact", to: "/contact" },
+] as const;
 
 function NavigationBar() {
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -39,19 +42,23 @@ function NavigationBar() {
           </span>
         </Link>
 
-        <ul className="flex items-center gap-1 sm:gap-2">
-          {links.map((link) => (
-            <li key={link.to}>
-              <Link
-                to={link.to}
-                className="group relative block px-2 py-1.5 text-sm font-medium text-mist transition-colors duration-500 hover:text-chalk sm:px-3"
-              >
-                {link.label}
-                <span className="absolute inset-x-2 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-brand to-spark transition-transform duration-500 group-hover:scale-x-100 sm:inset-x-3" />
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ul className="flex items-center gap-1 sm:gap-2">
+            {links.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  className="group relative block px-2 py-1.5 text-sm font-medium text-mist transition-colors duration-500 hover:text-chalk sm:px-3"
+                >
+                  {t.nav[link.key]}
+                  <span className="absolute inset-x-2 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-brand to-spark transition-transform duration-500 group-hover:scale-x-100 sm:inset-x-3" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <LanguageToggle />
+        </div>
       </nav>
     </header>
   );

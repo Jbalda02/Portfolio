@@ -1,9 +1,9 @@
-const NAME = "Jose Fernando Balda";
-const TAGLINE = "Quality Web Development";
+import { useLanguage } from "../i18n/context";
 
 function Hero() {
-  const nameWords = NAME.split(" ");
-  const taglineWords = TAGLINE.split(" ");
+  const { t } = useLanguage();
+  const nameWords = t.hero.name.split(" ");
+  const taglineWords = t.hero.tagline.split(" ");
 
   return (
     <section
@@ -24,13 +24,18 @@ function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-70" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
           </span>
-          Available for freelance work
+          {t.hero.badge}
         </p>
 
         <h1 className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-chalk sm:text-6xl lg:text-7xl">
+          {/*
+            Keyed by position, not by the word itself: switching language swaps
+            the text in place instead of remounting and replaying the ~1.6s
+            staggered entrance.
+          */}
           {nameWords.map((word, index) => (
             <span
-              key={word}
+              key={index}
               className="inline-block animate-fade-up"
               style={{ animationDelay: `${260 + index * 170}ms` }}
             >
@@ -41,7 +46,7 @@ function Hero() {
           <span className="mt-2 block text-2xl font-light italic sm:mt-4 sm:text-4xl lg:text-5xl">
             {taglineWords.map((word, index) => (
               <span
-                key={word}
+                key={index}
                 className="inline-block animate-fade-up text-gradient-brand"
                 style={{ animationDelay: `${820 + index * 170}ms` }}
               >
@@ -56,8 +61,7 @@ function Hero() {
           className="mx-auto mt-7 max-w-xl animate-fade-up text-balance text-sm leading-relaxed text-mist sm:mt-9 sm:text-base"
           style={{ animationDelay: "1420ms" }}
         >
-          Freelance web developer and Computer Science student, building fast and
-          accessible interfaces with React, TypeScript and Tailwind CSS.
+          {t.hero.intro}
         </p>
 
         <div
@@ -68,21 +72,21 @@ function Hero() {
             href="#projects"
             className="group relative w-full overflow-hidden rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-12px_rgba(139,92,246,.9)] transition-transform duration-500 hover:-translate-y-0.5 sm:w-auto"
           >
-            <span className="relative z-10">View my work</span>
+            <span className="relative z-10">{t.hero.viewWork}</span>
             <span className="absolute inset-0 -z-0 bg-gradient-to-r from-brand via-brand-soft to-spark opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
           </a>
           <a
             href="#contact"
             className="w-full rounded-full border border-edge-bright px-7 py-3 text-sm font-semibold text-chalk transition-colors duration-500 hover:border-brand hover:text-brand-soft sm:w-auto"
           >
-            Get in touch
+            {t.hero.getInTouch}
           </a>
         </div>
       </div>
 
       <a
         href="#stack"
-        aria-label="Scroll to content"
+        aria-label={t.hero.scrollHint}
         className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-dusk transition-colors hover:text-brand-soft"
       >
         <svg
