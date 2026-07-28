@@ -32,12 +32,12 @@ const BigGallery: React.FC<ProjectsProps> = ({ projects }) => {
               Project art is mixed-media clipart on transparent backgrounds, so
               it needs a light plate to stay legible against the dark card.
             */}
-            <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F5F3F9] to-[#E4E0EC]">
+            <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-[#F5F3F9] to-[#E4E0EC]">
               <img
                 src={project.image}
                 alt={project.name}
                 loading="lazy"
-                className="h-3/5 w-3/5 object-contain transition-transform duration-1000 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               {/* Light sweep on hover. */}
               <span className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-white/50 opacity-0 blur-md group-hover:animate-sheen group-hover:opacity-100" />
