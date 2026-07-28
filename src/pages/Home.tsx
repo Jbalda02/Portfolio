@@ -14,6 +14,10 @@ import projectData from "../jsons/projects.json";
 import section1image from "../assets/Images/Asap_React_140120.jpg";
 import section2image from "../assets/Images/ksr-banner-5.jpg";
 import aboutmeImg from "../assets/Icons/Portafolio.jpg";
+import classicGamesImg from "../assets/Images/ClassicGamesGallery.png";
+import todoListImg from "../assets/Images/toDoList.png";
+import nenecakesImg from "../assets/Images/nenecakes.png";
+import portfolioImg from "../assets/Images/portafolio.png";
 
 const aboutmeText =
   "I am a Freelancer Web Developer and Currently a Computer Science Student, with a passion for web development. I have experience in the development of web applications using technologies such as React, Node.js, and Tailwind Css. I am always looking to learn new technologies and improve my skills. I am currently looking for opportunities to work as a web developer.";
@@ -74,7 +78,17 @@ function Home() {
             </h2>
           </Reveal>
 
-          <BigGallery projects={projectData.projects} />
+          <BigGallery
+            projects={projectData.projects.map((p) => {
+              const imageMap: Record<string, string> = {
+                "1": classicGamesImg,
+                "2": todoListImg,
+                "3": nenecakesImg,
+                "5": portfolioImg,
+              };
+              return imageMap[p.id] ? { ...p, image: imageMap[p.id] } : p;
+            })}
+          />
         </div>
       </section>
 
